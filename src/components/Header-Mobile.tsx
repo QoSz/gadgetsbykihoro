@@ -93,7 +93,7 @@ export default function HeaderMobile({ navLinks, productCategories }: HeaderMobi
               alt="Gadgets By Kihoro Logo"
               width={512}
               height={512}
-              className="h-10 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
           <SheetTitle className="sr-only">Main Navigation Menu</SheetTitle>

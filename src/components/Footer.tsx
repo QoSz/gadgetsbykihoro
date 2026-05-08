@@ -16,7 +16,7 @@ export default function Footer() {
                 alt="Gadgets By Kihoro"
                 width={512}
                 height={512}
-                className="h-14 w-auto brightness-0 invert"
+                className="h-32 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-sm text-gray-400 max-w-md mb-4">
