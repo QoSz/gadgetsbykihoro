@@ -1,6 +1,6 @@
 {
-  "name": "FoneXpress - Kenya's Trusted Phone Retailer",
-  "short_name": "FoneXpress",
+  "name": "Gadgets By Kihoro - Your Trusted Gadgets Store",
+  "short_name": "Gadgets By Kihoro",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#E31E24",
+  "theme_color": "#007aff",
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "/"

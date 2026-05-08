@@ -4,14 +4,14 @@
 
 :root {
 
-  /* FoneXpress Brand Colors - from company logo */
-  --brand-red-primary: #E31E24;
-  --brand-red-dark: #B71C1C;
-  --brand-red-light: #FF5252;
+  /* Gadgets By Kihoro Brand Colors */
+  --brand-blue-primary: #007aff;
+  --brand-blue-dark: #0056b3;
+  --brand-blue-light: #4da3ff;
   --brand-grey-dark: #424242;
   --brand-grey-medium: #5A5A5A;
   --brand-grey-light: #757575;
-  --brand-accent: #FF6B6B;
+  --brand-accent: #34c759;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -53,9 +53,9 @@
   --font-mono: var(--font-geist-mono);
 
   /* Brand color extensions for Tailwind */
-  --color-brand-red: var(--brand-red-primary);
-  --color-brand-red-dark: var(--brand-red-dark);
-  --color-brand-red-light: var(--brand-red-light);
+  --color-brand-blue: var(--brand-blue-primary);
+  --color-brand-blue-dark: var(--brand-blue-dark);
+  --color-brand-blue-light: var(--brand-blue-light);
   --color-brand-grey: var(--brand-grey-dark);
   --color-brand-grey-medium: var(--brand-grey-medium);
   --color-brand-grey-light: var(--brand-grey-light);

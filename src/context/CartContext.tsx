@@ -22,7 +22,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>(() => {
     try {
-      const savedCart = typeof window !== 'undefined' ? localStorage.getItem('fonexpress-cart') : null;
+      const savedCart = typeof window !== 'undefined' ? localStorage.getItem('gadgetsbykihoro-cart') : null;
       return savedCart ? JSON.parse(savedCart) : [];
     } catch (error) {
       console.error('Error loading cart:', error);
@@ -32,7 +32,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem('fonexpress-cart', JSON.stringify(cart));
+    localStorage.setItem('gadgetsbykihoro-cart', JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (product: Product) => {

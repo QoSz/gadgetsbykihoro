@@ -24,7 +24,7 @@ export default function CartPage() {
     message += 'Please confirm availability and delivery details.';
 
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/254788740000?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/254743816791?text=${encodedMessage}`, '_blank');
   };
 
   if (cart.length === 0) {
@@ -41,7 +41,7 @@ export default function CartPage() {
             </p>
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#E31E24] to-[#B71C1C] text-white rounded-lg font-semibold hover:shadow-lg transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white rounded-lg font-semibold hover:shadow-lg transition-all hover:scale-105"
             >
               <ShoppingBag className="w-5 h-5" />
               Start Shopping
@@ -59,7 +59,7 @@ export default function CartPage() {
         <div className="mb-8">
           <button
             onClick={() => router.back()}
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-[#E31E24] transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-[#007aff] transition-colors mb-4"
           >
             <ArrowLeft className="w-5 h-5" />
             Continue Shopping
@@ -112,7 +112,7 @@ export default function CartPage() {
                         </h3>
                         <p className="text-sm text-gray-600 mb-2">{item.brand}</p>
                         {item.badge && (
-                          <span className="inline-block bg-[#E31E24] text-white text-xs px-2 py-1 rounded font-semibold">
+                          <span className="inline-block bg-[#007aff] text-white text-xs px-2 py-1 rounded font-semibold">
                             {item.badge}
                           </span>
                         )}
@@ -153,7 +153,7 @@ export default function CartPage() {
 
                       {/* Price */}
                       <div className="text-right">
-                        <p className="text-xl font-bold text-[#E31E24]">
+                        <p className="text-xl font-bold text-[#007aff]">
                           {formatPrice(item.price * item.quantity)}
                         </p>
                         {item.quantity > 1 && (
@@ -189,7 +189,7 @@ export default function CartPage() {
                 <div className="border-t border-gray-200 pt-4">
                   <div className="flex justify-between text-lg font-bold text-gray-900">
                     <span>Total</span>
-                    <span className="text-[#E31E24]">{formatPrice(getCartTotal())}</span>
+                    <span className="text-[#007aff]">{formatPrice(getCartTotal())}</span>
                   </div>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function CartPage() {
               {/* Checkout Button */}
               <button
                 onClick={handleCheckout}
-                className="w-full px-6 py-4 bg-gradient-to-r from-[#E31E24] to-[#B71C1C] text-white rounded-lg font-bold text-lg hover:shadow-lg transition-all hover:scale-105 mb-4"
+                className="w-full px-6 py-4 bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white rounded-lg font-bold text-lg hover:shadow-lg transition-all hover:scale-105 mb-4"
               >
                 Proceed to Checkout
               </button>
@@ -205,7 +205,7 @@ export default function CartPage() {
               {/* Continue Shopping Link */}
               <Link
                 href="/products"
-                className="block w-full text-center px-6 py-3 border-2 border-gray-200 text-gray-700 rounded-lg font-semibold hover:border-[#E31E24] hover:text-[#E31E24] transition-colors"
+                className="block w-full text-center px-6 py-3 border-2 border-gray-200 text-gray-700 rounded-lg font-semibold hover:border-[#007aff] hover:text-[#007aff] transition-colors"
               >
                 Continue Shopping
               </Link>

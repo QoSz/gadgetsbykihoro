@@ -81,12 +81,12 @@ export default function FilterDrawer({
           {/* Active Filters Badge */}
           {activeFiltersCount > 0 && (
             <div className="mt-3 flex items-center justify-between">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#E31E24] text-white text-xs font-medium rounded-full">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#007aff] text-white text-xs font-medium rounded-full">
                 {activeFiltersCount} {activeFiltersCount === 1 ? 'Filter' : 'Filters'} Active
               </div>
               <button
                 onClick={onClearAll}
-                className="text-sm text-[#E31E24] hover:text-[#B71C1C] font-medium transition-colors"
+                className="text-sm text-[#007aff] hover:text-[#0056b3] font-medium transition-colors"
               >
                 Clear All
               </button>
@@ -121,7 +121,7 @@ export default function FilterDrawer({
         <div className="sticky bottom-0 bg-white border-t border-gray-200 px-6 py-4 shadow-lg">
           <button
             onClick={onClose}
-            className="w-full bg-gradient-to-r from-[#E31E24] to-[#B71C1C] text-white font-semibold py-3.5 rounded-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white font-semibold py-3.5 rounded-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
           >
             View {resultCount || 0} {resultCount === 1 ? 'Product' : 'Products'}
           </button>

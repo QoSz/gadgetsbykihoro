@@ -1,6 +1,6 @@
-Product Requirements Document (PRD) – FoneXpress Website Redesign
+Product Requirements Document (PRD) – Gadgets By Kihoro Website Redesign
 1. Background & Purpose
-Project: Redesign FoneXpress website in Next.js using modern UI/UX, responsive design, Tailwind CSS, and a custom cursor effect.Goal: Provide a clean, professional, mobile‑friendly site for FoneXpress (Kenya’s phone retailer), improve user engagement, and leverage Cursor AI for developer productivity.
+Project: Redesign Gadgets By Kihoro website in Next.js using modern UI/UX, responsive design, Tailwind CSS, and a custom cursor effect.Goal: Provide a clean, professional, mobile‑friendly site for Gadgets By Kihoro (Kenya’s phone retailer), improve user engagement, and leverage Cursor AI for developer productivity.
 2. Scope
 Included: Next.js + Tailwind CSS, major pages (Home, Products, Services, About, Contact), custom cursor, SEO, responsive layout, deployment on Vercel.Excluded: E‑commerce checkout, CMS integration, multi‑language support (future).
 3. Success Metrics
@@ -10,7 +10,7 @@ Included: Next.js + Tailwind CSS, major pages (Home, Products, Services, About, 
 5. Non‑Functional Requirements
 Performance (Lighthouse >90), Accessibility (WCAG compliant), Maintainability (modular components), Scalability (future CMS ready), Security (XSS-safe).
 6. User Stories
-- As a visitor, I want to quickly learn what FoneXpress offers.- As a shopper, I want to filter phones by brand.- As a repair customer, I want to understand the service process.- As a site owner, I want easy content updates with Cursor assistance.
+- As a visitor, I want to quickly learn what Gadgets By Kihoro offers.- As a shopper, I want to filter phones by brand.- As a repair customer, I want to understand the service process.- As a site owner, I want easy content updates with Cursor assistance.
 7. Development Strategy
 Sprint 1: Setup Next.js + Tailwind.Sprint 2: Home Page + Layout.Sprint 3: Products + Filtering.Sprint 4: Services + About + Contact.Sprint 5: Custom Cursor Integration.Sprint 6: SEO + Deployment.Sprint 7: Testing & Review.
 8. Cursor Usage Guidelines

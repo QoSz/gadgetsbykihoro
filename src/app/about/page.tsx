@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us - FoneXpress',
-  description: 'Learn about FoneXpress, Kenya\'s trusted phone retailer with years of experience and exceptional service',
+  title: 'About Us - Gadgets By Kihoro',
+  description: 'Learn about Gadgets By Kihoro, your trusted gadgets store with years of experience and exceptional service in Kenya',
 };
 
 export default function AboutPage() {
@@ -86,11 +86,11 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#E31E24] to-[#B71C1C] text-white py-20">
+      <section className="bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">About FoneXpress</h1>
-          <p className="text-lg text-red-100 max-w-3xl mx-auto">
-            Kenya&apos;s trusted phone retailer, committed to keeping you connected with quality products and exceptional service
+          <h1 className="text-3xl md:text-4xl font-bold mb-6">About Gadgets By Kihoro</h1>
+          <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+            Kenya&apos;s trusted electronics retailer, committed to keeping you connected with quality products and exceptional service
           </p>
         </div>
       </section>
@@ -105,20 +105,20 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 text-base">
                 <p>
-                  Founded in 2019, FoneXpress began with a simple mission: to provide Kenyans with access to quality smartphones and reliable repair services at fair prices.
+                  Founded with a passion for technology and a commitment to customer satisfaction, Gadgets By Kihoro has been making cutting-edge technology accessible to everyone.
                 </p>
                 <p>
-                  What started as a small shop in Nairobi has grown into one of Kenya&apos;s most trusted phone retailers, serving thousands of satisfied customers across the country.
+                  Based at Platinum Plaza, 3rd Floor, Shop No. 305, Nairobi, Gadgets By Kihoro has grown into one of Kenya&apos;s most trusted electronics retailers, serving thousands of satisfied customers across the country.
                 </p>
                 <p>
                   We pride ourselves on our commitment to authenticity, transparency, and customer satisfaction. Every device we sell and every repair we perform meets our high standards of quality.
                 </p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-[#E31E24]/10 via-gray-50 to-gray-100 rounded-2xl h-96 flex items-center justify-center relative overflow-hidden shadow-lg">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#E31E24]/5 to-transparent"></div>
+            <div className="bg-gradient-to-br from-[#007aff]/10 via-gray-50 to-gray-100 rounded-2xl h-96 flex items-center justify-center relative overflow-hidden shadow-lg">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#007aff]/5 to-transparent"></div>
               <div className="relative">
-                <div className="w-48 h-48 bg-gradient-to-br from-[#E31E24] to-[#B71C1C] rounded-3xl flex items-center justify-center shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300">
+                <div className="w-48 h-48 bg-gradient-to-br from-[#007aff] to-[#0056b3] rounded-3xl flex items-center justify-center shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300">
                   <svg className="w-28 h-28 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
@@ -135,7 +135,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-[#E31E24] mb-2">
+                <p className="text-3xl md:text-4xl font-bold text-[#007aff] mb-2">
                   {stat.number}
                 </p>
                 <p className="text-gray-600 font-medium">{stat.label}</p>
@@ -208,17 +208,17 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-[#E31E24] to-[#B71C1C] text-white">
+      <section className="py-20 bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
-            Ready to Experience the FoneXpress Difference?
+            Ready to Experience the Gadgets By Kihoro Difference?
           </h2>
-          <p className="text-lg mb-8 text-red-100 max-w-2xl mx-auto">
+          <p className="text-lg mb-8 text-blue-100 max-w-2xl mx-auto">
             Visit our store or get in touch with us today
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#E31E24] rounded-full font-semibold hover:bg-gray-50 transition-all hover:scale-105"
+            className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#007aff] rounded-full font-semibold hover:bg-gray-50 transition-all hover:scale-105"
           >
             Contact Us
           </a>

@@ -168,10 +168,10 @@ function ProductsContent() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#E31E24] to-[#B71C1C] text-white py-16">
+      <section className="bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">All Products</h1>
-          <p className="text-lg text-red-100 max-w-3xl mx-auto mb-6">
+          <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-6">
             Browse our complete collection of smartphones, tablets, TVs, and accessories
           </p>
           {/* Quick Links to Categories */}
@@ -230,7 +230,7 @@ function ProductsContent() {
                   setSelectedCategory('all');
                   setSelectedPrice('all');
                 }}
-                className="inline-flex items-center justify-center px-6 py-3 bg-[#E31E24] text-white rounded-lg font-semibold hover:bg-[#B71C1C] transition-all"
+                className="inline-flex items-center justify-center px-6 py-3 bg-[#007aff] text-white rounded-lg font-semibold hover:bg-[#0056b3] transition-all"
               >
                 Reset Filters
               </button>
@@ -242,17 +242,17 @@ function ProductsContent() {
       {/* CTA Section */}
       <section className="py-16 bg-white border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-[#E31E24] to-[#B71C1C] rounded-3xl p-12 text-center text-white">
+          <div className="bg-gradient-to-r from-[#007aff] to-[#0056b3] rounded-3xl p-12 text-center text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Can&apos;t Find What You&apos;re Looking For?
             </h2>
-            <p className="text-lg text-red-100 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
               Contact us directly and we&apos;ll help you find the perfect device for your needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#E31E24] rounded-lg font-bold text-base hover:bg-gray-100 transition-all shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#007aff] rounded-lg font-bold text-base hover:bg-gray-100 transition-all shadow-lg"
               >
                 Contact Us
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,7 +260,7 @@ function ProductsContent() {
                 </svg>
               </Link>
               <a
-                href="https://wa.me/254788740000"
+                href="https://wa.me/254743816791"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-green-500 text-white rounded-lg font-bold text-base hover:bg-green-600 transition-all shadow-lg"
@@ -282,16 +282,16 @@ export default function ProductsPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-[#E31E24] to-[#B71C1C] text-white py-16">
+        <section className="bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">All Products</h1>
-            <p className="text-lg text-red-100 max-w-3xl mx-auto">
+            <p className="text-lg text-blue-100 max-w-3xl mx-auto">
               Browse our complete collection of smartphones, tablets, TVs, and accessories
             </p>
           </div>
         </section>
         <div className="flex items-center justify-center py-20">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#E31E24]"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#007aff]"></div>
         </div>
       </div>
     }>

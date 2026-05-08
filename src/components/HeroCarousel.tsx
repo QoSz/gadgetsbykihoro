@@ -112,7 +112,7 @@ const slides: Slide[] = [
   {
     id: 5,
     src: '/home-hero/service-centers.png',
-    alt: 'FoneXpress Service Centers',
+    alt: 'Gadgets By Kihoro Service Centers',
     width: 1024,
     height: 293,
     title: '25 Years of Excellence',

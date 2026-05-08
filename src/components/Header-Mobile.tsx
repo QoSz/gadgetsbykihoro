@@ -90,7 +90,7 @@ export default function HeaderMobile({ navLinks, productCategories }: HeaderMobi
           <Link href="/" className="flex items-center" onClick={handleLinkClick}>
             <Image
               src="/company-logo/logo.png"
-              alt="FoneXpress Logo"
+              alt="Gadgets By Kihoro Logo"
               width={180}
               height={36}
               className="h-9 w-auto"
@@ -98,7 +98,7 @@ export default function HeaderMobile({ navLinks, productCategories }: HeaderMobi
           </Link>
           <SheetTitle className="sr-only">Main Navigation Menu</SheetTitle>
           <SheetDescription className="sr-only">
-            Navigate through FoneXpress products, services, and contact information
+            Navigate through Gadgets By Kihoro products, services, and contact information
           </SheetDescription>
         </SheetHeader>
 
@@ -145,7 +145,7 @@ export default function HeaderMobile({ navLinks, productCategories }: HeaderMobi
         {/* WhatsApp CTA Button - Fixed at bottom */}
         <SheetFooter className="mt-auto border-t">
           <a
-            href="https://wa.me/254788740000"
+            href="https://wa.me/254743816791"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg font-semibold text-base hover:shadow-lg transition-shadow"

@@ -46,7 +46,7 @@ export default function FilterSection({
         <select
           value={selectedValue}
           onChange={(e) => onValueChange(e.target.value)}
-          className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#E31E24] focus:border-[#E31E24] transition-all"
+          className="w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#007aff] focus:border-[#007aff] transition-all"
         >
           {options.map((option) => (
             <option key={option.value} value={option.value}>
@@ -67,9 +67,9 @@ export default function FilterSection({
       >
         <span className="text-sm font-semibold text-gray-900">{title}</span>
         {isExpanded ? (
-          <ChevronUp className="w-4 h-4 text-gray-500 group-hover:text-[#E31E24] transition-colors" />
+          <ChevronUp className="w-4 h-4 text-gray-500 group-hover:text-[#007aff] transition-colors" />
         ) : (
-          <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-[#E31E24] transition-colors" />
+          <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-[#007aff] transition-colors" />
         )}
       </button>
 
@@ -86,7 +86,7 @@ export default function FilterSection({
                 value={option.value}
                 checked={selectedValue === option.value}
                 onChange={(e) => onValueChange(e.target.value)}
-                className="w-4 h-4 text-[#E31E24] border-gray-300 focus:ring-[#E31E24] focus:ring-2 cursor-pointer"
+                className="w-4 h-4 text-[#007aff] border-gray-300 focus:ring-[#007aff] focus:ring-2 cursor-pointer"
               />
               <span className="flex-1 text-sm text-gray-700 group-hover:text-gray-900 transition-colors">
                 {option.label}

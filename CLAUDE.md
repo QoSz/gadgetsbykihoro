@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-FoneXpress is a Next.js website for Kenya's trusted phone retailer (since 1999). The site showcases smartphones, tablets, accessories, and services with a modern, responsive design built using Next.js 16, React 19, TypeScript, and Tailwind CSS 4.
+Gadgets By Kihoro is a Next.js website for a premium electronics retailer in Kenya. The site showcases smartphones, tablets, accessories, and services with a modern, responsive design built using Next.js 16, React 19, TypeScript, and Tailwind CSS 4.
 
 **Key Business Context:**
 - 25th Anniversary celebration (1999-2024)
@@ -73,7 +73,7 @@ npm run lint         # Run ESLint
 3. **Contact Integration**:
    - WhatsApp: `https://wa.me/254788740000`
    - Phone: `tel:+254788740000`
-   - Email: `sales@fonexpress.net`
+   - Email: `info@gadgetsbykihoro.com`
 
 4. **Product URL Structure**:
    - Price filtering: `/products?price=under-10k`

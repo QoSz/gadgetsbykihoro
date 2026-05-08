@@ -16,13 +16,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FoneXpress - Kenya's Trusted Phone Retailer",
-  description: "Shop the latest smartphones, get expert repairs, and comprehensive warranties at FoneXpress. Kenya's premier phone retailer with exceptional service.",
-  keywords: ["phones", "smartphones", "Kenya", "phone repair", "warranty", "mobile phones"],
-  authors: [{ name: "FoneXpress" }],
+  title: "Gadgets By Kihoro - Your Trusted Gadgets Store",
+  description: "Discover the latest tech at unbeatable prices. Fast delivery, authentic products, and exceptional service at Gadgets By Kihoro.",
+  keywords: ["gadgets", "electronics", "smartphones", "Kenya", "tablets", "accessories", "Gadgets By Kihoro"],
+  authors: [{ name: "Gadgets By Kihoro" }],
   openGraph: {
-    title: "FoneXpress - Kenya's Trusted Phone Retailer",
-    description: "Shop the latest smartphones and get expert repair services in Kenya",
+    title: "Gadgets By Kihoro - Your Trusted Gadgets Store",
+    description: "Discover the latest tech at unbeatable prices. Authentic products and exceptional service in Kenya.",
     type: "website",
   },
   icons: {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "FoneXpress",
+    title: "Gadgets By Kihoro",
   },
   formatDetection: {
     telephone: false,

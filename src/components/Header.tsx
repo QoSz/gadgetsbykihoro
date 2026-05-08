@@ -77,7 +77,7 @@ export default function Header() {
           <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
             <Image
               src="/company-logo/logo.png"
-              alt="FoneXpress - Maneno Yote"
+              alt="Gadgets By Kihoro"
               width={225}
               height={45}
               priority
@@ -148,7 +148,7 @@ export default function Header() {
             
             {/* CTA Button */}
             <a
-              href="https://wa.me/254788740000"
+              href="https://wa.me/254743816791"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg font-semibold text-sm hover:shadow-lg transition-all hover:scale-105"

@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Promotional Banner */}
-      <div className="bg-gradient-to-r from-[#E31E24] to-[#B71C1C] text-white py-3">
+      <div className="bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white py-3">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs md:text-sm font-semibold">
             <span className="inline-block bg-white/20 px-2 py-0.5 rounded text-xs mr-2">NEW</span>
@@ -141,21 +141,21 @@ export default function Home() {
                       <div className="w-24 h-24 bg-white rounded-xl shadow-inner"></div>
                     </div>
                   </div>
-                  <div className="absolute top-3 left-3 bg-[#E31E24] text-white px-3 py-1 rounded-md text-xs font-bold shadow-lg">
+                  <div className="absolute top-3 left-3 bg-[#007aff] text-white px-3 py-1 rounded-md text-xs font-bold shadow-lg">
                     {product.badge}
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-grow">
-                  <p className="text-[10px] font-semibold text-[#E31E24] mb-1 uppercase">{product.brand}</p>
-                  <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-[#E31E24] transition-colors">
+                  <p className="text-[10px] font-semibold text-[#007aff] mb-1 uppercase">{product.brand}</p>
+                  <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-[#007aff] transition-colors">
                     {product.name}
                   </h3>
                   <p className="text-[10px] text-gray-600 mb-3">{product.specs}</p>
 
                   <div className="flex items-baseline gap-2 mb-4">
-                    <p className="text-xl font-bold text-[#E31E24]">
+                    <p className="text-xl font-bold text-[#007aff]">
                       {product.price}
                     </p>
                     <p className="text-sm text-gray-400 line-through">
@@ -166,12 +166,12 @@ export default function Home() {
                   <div className="grid grid-cols-2 gap-2 mt-auto">
                     <Link
                       href="/products"
-                      className="text-center px-4 py-2 bg-[#E31E24] text-white rounded-lg font-semibold text-sm hover:bg-[#B71C1C] transition-colors"
+                      className="text-center px-4 py-2 bg-[#007aff] text-white rounded-lg font-semibold text-sm hover:bg-[#0056b3] transition-colors"
                     >
                       Buy Now
                     </Link>
                     <a
-                      href="https://wa.me/254788740000"
+                      href="https://wa.me/254743816791"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-center px-4 py-2 bg-green-500 text-white rounded-lg font-semibold text-sm hover:bg-green-600 transition-colors"
@@ -187,7 +187,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/products"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#E31E24] text-white rounded-lg font-bold text-base hover:bg-[#B71C1C] transition-colors shadow-lg hover:shadow-xl"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#007aff] text-white rounded-lg font-bold text-base hover:bg-[#0056b3] transition-colors shadow-lg hover:shadow-xl"
             >
               View All Products
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,10 +254,10 @@ export default function Home() {
                 href="/products"
                 className="group"
               >
-                <div className="relative bg-white/60 backdrop-blur-md rounded-xl p-6 text-center transition-all border border-gray-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-[#E31E24]/30 overflow-hidden">
-                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#E31E24]/20 to-[#B71C1C]/20 group-hover:h-1 group-hover:from-[#E31E24] group-hover:to-[#B71C1C] transition-all"></div>
+                <div className="relative bg-white/60 backdrop-blur-md rounded-xl p-6 text-center transition-all border border-gray-200 shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:border-[#007aff]/30 overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#007aff]/20 to-[#0056b3]/20 group-hover:h-1 group-hover:from-[#007aff] group-hover:to-[#0056b3] transition-all"></div>
                   <div className="pt-2">
-                    <h3 className="font-bold text-base text-gray-900 mb-2 group-hover:text-[#E31E24] transition-colors">{category.name}</h3>
+                    <h3 className="font-bold text-base text-gray-900 mb-2 group-hover:text-[#007aff] transition-colors">{category.name}</h3>
                     <p className="text-sm text-gray-600">{category.count} items</p>
                   </div>
                 </div>
@@ -412,21 +412,21 @@ export default function Home() {
                       {service.svg}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#E31E24] transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#007aff] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-lg font-bold text-[#E31E24]">{service.price}</span>
+                    <span className="text-lg font-bold text-[#007aff]">{service.price}</span>
                     <span className="text-xs text-gray-500 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full border border-gray-200">90-day warranty</span>
                   </div>
                   <a
-                    href="https://wa.me/254788740000"
+                    href="https://wa.me/254743816791"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full text-center px-4 py-3 bg-[#E31E24] text-white rounded-xl font-semibold text-sm hover:bg-[#B71C1C] transition-all shadow-md hover:shadow-lg"
+                    className="block w-full text-center px-4 py-3 bg-[#007aff] text-white rounded-xl font-semibold text-sm hover:bg-[#0056b3] transition-all shadow-md hover:shadow-lg"
                   >
                     Book Repair
                   </a>
@@ -450,7 +450,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[#E31E24] via-[#B71C1C] to-[#424242] text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-[#007aff] via-[#0056b3] to-[#424242] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
@@ -462,14 +462,14 @@ export default function Home() {
           <h2 className="text-2xl md:text-4xl font-bold mb-6">
             Ready to Upgrade Your Phone?
           </h2>
-          <p className="text-lg md:text-xl mb-10 text-red-100 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl mb-10 text-blue-100 max-w-3xl mx-auto">
             Visit any of our branches or contact us today to find your perfect device
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#E31E24] rounded-lg font-bold text-base hover:bg-[#424242] hover:text-white transition-all shadow-xl"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#007aff] rounded-lg font-bold text-base hover:bg-[#424242] hover:text-white transition-all shadow-xl"
             >
               Find a Branch
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -478,28 +478,28 @@ export default function Home() {
               </svg>
             </Link>
             <a
-              href="tel:+254788740000"
+              href="tel:+254743816791"
               className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-bold text-base hover:bg-white/10 transition-all"
             >
               <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
               </svg>
-              +254 788 740 000
+              +254 743 816 791
             </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
               <p className="text-sm font-semibold mb-1">Call Us</p>
-              <p className="text-base">+254 788 740 000</p>
+              <p className="text-base">+254 743 816 791</p>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
               <p className="text-sm font-semibold mb-1">Email Us</p>
-              <p className="text-base">sales@fonexpress.net</p>
+              <p className="text-base">info@gadgetsbykihoro.com</p>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
               <p className="text-sm font-semibold mb-1">Location</p>
-              <p className="text-base">Westlands, Nairobi</p>
+              <p className="text-base">Platinum Plaza, 3rd Floor, Shop 305, Nairobi</p>
             </div>
           </div>
         </div>

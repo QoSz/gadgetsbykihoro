@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Services - FoneXpress',
-  description: 'Expert phone repair services and comprehensive warranty coverage at FoneXpress Kenya',
+  title: 'Services - Gadgets By Kihoro',
+  description: 'Expert repair services and comprehensive warranty coverage at Gadgets By Kihoro Kenya',
 };
 
 export default function ServicesPage() {
@@ -119,10 +119,10 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#E31E24] to-[#B71C1C] text-white py-20">
+      <section className="bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-6">Our Services</h1>
-          <p className="text-lg text-red-100 max-w-3xl mx-auto">
+          <p className="text-lg text-blue-100 max-w-3xl mx-auto">
             Expert repair services and comprehensive warranty plans to keep your device running perfectly
           </p>
         </div>
@@ -156,8 +156,8 @@ export default function ServicesPage() {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-[#E31E24]/10 text-[#E31E24] px-4 py-2 rounded-full mb-6">
-              <div className="w-2 h-2 bg-[#E31E24] rounded-full animate-pulse"></div>
+            <div className="inline-flex items-center gap-2 bg-[#007aff]/10 text-[#007aff] px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-[#007aff] rounded-full animate-pulse"></div>
               <span className="font-bold text-sm">Expert Technicians Available</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -234,10 +234,10 @@ export default function ServicesPage() {
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
                     <a
-                      href="https://wa.me/254788740000"
+                      href="https://wa.me/254743816791"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 text-center px-4 py-3 bg-[#E31E24] text-white rounded-xl font-semibold text-sm hover:bg-[#B71C1C] transition-all shadow-md hover:shadow-lg group-hover:scale-[1.02]"
+                      className="flex-1 text-center px-4 py-3 bg-[#007aff] text-white rounded-xl font-semibold text-sm hover:bg-[#0056b3] transition-all shadow-md hover:shadow-lg group-hover:scale-[1.02]"
                     >
                       Book Now
                     </a>
@@ -258,7 +258,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Emergency Service Banner */}
-          <div className="mt-16 bg-gradient-to-br from-[#E31E24] via-[#B71C1C] to-[#424242] rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+          <div className="mt-16 bg-gradient-to-br from-[#007aff] via-[#0056b3] to-[#424242] rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0" style={{
                 backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
@@ -276,13 +276,13 @@ export default function ServicesPage() {
                 <h3 className="text-3xl font-bold mb-4">
                   Need Urgent Repair?
                 </h3>
-                <p className="text-red-100 mb-6 text-lg">
+                <p className="text-blue-100 mb-6 text-lg">
                   Walk in to any of our service centers for immediate assistance. Most repairs completed the same day!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="tel:+254788740000"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#E31E24] rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg"
+                    href="tel:+254743816791"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#007aff] rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg"
                   >
                     <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -290,7 +290,7 @@ export default function ServicesPage() {
                     Call Now
                   </a>
                   <a
-                    href="https://wa.me/254788740000"
+                    href="https://wa.me/254743816791"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-xl font-bold hover:bg-green-600 transition-all shadow-lg"
@@ -310,7 +310,7 @@ export default function ServicesPage() {
                     </svg>
                   </div>
                   <p className="text-2xl font-bold">Same-Day Service</p>
-                  <p className="text-red-100">Available for Most Repairs</p>
+                  <p className="text-blue-100">Available for Most Repairs</p>
                 </div>
               </div>
             </div>
@@ -336,7 +336,7 @@ export default function ServicesPage() {
                 key={index}
                 className={`rounded-2xl p-8 ${
                   plan.popular
-                    ? 'bg-gradient-to-br from-[#E31E24] to-[#B71C1C] text-white shadow-2xl scale-105'
+                    ? 'bg-gradient-to-br from-[#007aff] to-[#0056b3] text-white shadow-2xl scale-105'
                     : 'bg-gray-50 text-gray-900'
                 }`}
               >
@@ -346,7 +346,7 @@ export default function ServicesPage() {
                   </div>
                 )}
                 <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
-                <p className={`text-base mb-4 ${plan.popular ? 'text-red-100' : 'text-gray-600'}`}>
+                <p className={`text-base mb-4 ${plan.popular ? 'text-blue-100' : 'text-gray-600'}`}>
                   {plan.duration}
                 </p>
                 <p className="text-3xl font-bold mb-6">{plan.price}</p>
@@ -373,8 +373,8 @@ export default function ServicesPage() {
                 <button
                   className={`w-full py-3 rounded-full font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-white text-[#E31E24] hover:bg-gray-50'
-                      : 'bg-[#E31E24] text-white hover:bg-[#B71C1C]'
+                      ? 'bg-white text-[#007aff] hover:bg-gray-50'
+                      : 'bg-[#007aff] text-white hover:bg-[#0056b3]'
                   }`}
                 >
                   Choose Plan
@@ -446,15 +446,15 @@ export default function ServicesPage() {
                 <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 h-full flex flex-col items-center text-center">
                   {/* Step Number with Gradient */}
                   <div className="relative mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#E31E24] to-[#B71C1C] text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300 relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#007aff] to-[#0056b3] text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300 relative z-10">
                       {item.step}
                     </div>
                     {/* Glow effect on hover */}
-                    <div className="absolute inset-0 bg-[#E31E24]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-[#007aff]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
 
                   {/* Icon */}
-                  <div className="mb-4 text-gray-700 group-hover:text-[#E31E24] transition-colors duration-300 group-hover:scale-110 transform transition-transform">
+                  <div className="mb-4 text-gray-700 group-hover:text-[#007aff] transition-colors duration-300 group-hover:scale-110 transform transition-transform">
                     {item.icon}
                   </div>
 

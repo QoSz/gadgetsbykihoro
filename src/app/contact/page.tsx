@@ -34,33 +34,33 @@ export default function ContactPage() {
     {
       icon: '📍',
       title: 'Visit Us',
-      details: ['Kimathi Street, Nairobi', 'Kenya'],
+      details: ['Platinum Plaza, 3rd Floor, Shop No. 305', 'Nairobi, Kenya'],
     },
     {
       icon: '📞',
       title: 'Call Us',
-      details: ['+254 700 000 000', '+254 711 111 111'],
+      details: ['+254 743 816 791'],
     },
     {
       icon: '📧',
       title: 'Email Us',
-      details: ['info@fonexpress.co.ke', 'support@fonexpress.co.ke'],
+      details: ['info@gadgetsbykihoro.com'],
     },
     {
       icon: '🕐',
       title: 'Business Hours',
-      details: ['Mon - Fri: 8:00 AM - 7:00 PM', 'Sat: 9:00 AM - 6:00 PM', 'Sun: 10:00 AM - 4:00 PM'],
+      details: ['Mon - Sat: 9:00 AM - 6:00 PM', 'Sunday: Closed'],
     },
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-linear-to-r from-[#E31E24] to-[#B71C1C] text-white py-12 md:py-20">
+      <section className="bg-linear-to-r from-[#007aff] to-[#0056b3] text-white py-12 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Contact Us</h1>
-          <p className="text-lg text-red-100 max-w-3xl mx-auto">
-            Get in touch with us for any questions, support, or inquiries
+          <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+            Get in touch with Gadgets By Kihoro for any questions, support, or inquiries
           </p>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function ContactPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E31E24] focus:border-transparent text-gray-900 placeholder:text-gray-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#007aff] focus:border-transparent text-gray-900 placeholder:text-gray-300"
                     placeholder="John Doe"
                   />
                 </div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E31E24] focus:border-transparent text-gray-900 placeholder:text-gray-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#007aff] focus:border-transparent text-gray-900 placeholder:text-gray-300"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -148,8 +148,8 @@ export default function ContactPage() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E31E24] focus:border-transparent text-gray-900 placeholder:text-gray-300"
-                    placeholder="+254 700 000 000"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#007aff] focus:border-transparent text-gray-900 placeholder:text-gray-300"
+                    placeholder="+254 743 816 791"
                   />
                 </div>
 
@@ -163,7 +163,7 @@ export default function ContactPage() {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E31E24] focus:border-transparent text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#007aff] focus:border-transparent text-gray-900"
                   >
                     <option value="">Select a subject</option>
                     <option value="sales">Sales Inquiry</option>
@@ -185,14 +185,14 @@ export default function ContactPage() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E31E24] focus:border-transparent resize-none text-gray-900 placeholder:text-gray-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#007aff] focus:border-transparent resize-none text-gray-900 placeholder:text-gray-300"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-3 md:py-4 bg-[#E31E24] text-white rounded-full font-semibold hover:bg-[#B71C1C] transition-colors"
+                  className="w-full px-8 py-3 md:py-4 bg-[#007aff] text-white rounded-full font-semibold hover:bg-[#0056b3] transition-colors"
                 >
                   Send Message
                 </button>
@@ -206,7 +206,7 @@ export default function ContactPage() {
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
                   Find Us
                 </h3>
-                <div className="bg-linear-to-br from-red-100 to-gray-100 rounded-lg h-48 md:h-64 flex items-center justify-center text-6xl">
+                <div className="bg-linear-to-br from-blue-100 to-gray-100 rounded-lg h-48 md:h-64 flex items-center justify-center text-6xl">
                   🗺️
                 </div>
                 <p className="mt-4 text-gray-600">
