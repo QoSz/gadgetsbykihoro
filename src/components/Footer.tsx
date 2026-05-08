@@ -14,14 +14,14 @@ export default function Footer() {
               <Image
                 src="/company-logo/logo.png"
                 alt="Gadgets By Kihoro"
-                width={225}
-                height={45}
-                className="h-12 w-auto brightness-0 invert"
+                width={512}
+                height={512}
+                className="h-14 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-sm text-gray-400 max-w-md mb-4">
-              Kenya&apos;s #1 trusted phone retailer since 1999. PhoneLink & Airtel Partner Shops. 
-              We offer the latest smartphones, expert repair services, and comprehensive warranties.
+              Your trusted source for the latest gadgets and electronics.
+              Discover cutting-edge technology at unbeatable prices with fast delivery and exceptional service.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>

@@ -91,9 +91,9 @@ export default function HeaderMobile({ navLinks, productCategories }: HeaderMobi
             <Image
               src="/company-logo/logo.png"
               alt="Gadgets By Kihoro Logo"
-              width={180}
-              height={36}
-              className="h-9 w-auto"
+              width={512}
+              height={512}
+              className="h-10 w-auto"
             />
           </Link>
           <SheetTitle className="sr-only">Main Navigation Menu</SheetTitle>

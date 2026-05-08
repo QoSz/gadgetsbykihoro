@@ -78,10 +78,10 @@ export default function Header() {
             <Image
               src="/company-logo/logo.png"
               alt="Gadgets By Kihoro"
-              width={225}
-              height={45}
+              width={512}
+              height={512}
               priority
-              className="h-11 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
