@@ -53,40 +53,40 @@ export default function FilterDrawer({
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+        className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Drawer */}
       <div
-        className="fixed inset-y-0 left-0 w-[85vw] max-w-sm bg-white shadow-2xl z-50 overflow-y-auto animate-in slide-in-from-left duration-300"
+        className="fixed inset-y-0 left-0 w-[85vw] max-w-sm bg-white shadow-xl z-50 overflow-y-auto animate-in slide-in-from-left duration-300"
         role="dialog"
         aria-modal="true"
         aria-label="Filter products"
       >
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 z-10">
+        <div className="sticky top-0 bg-white border-b border-gray-100 px-6 py-4 z-10">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-bold text-gray-900">Filters</h2>
+            <h2 className="text-lg font-bold text-[#0a0a0a]">Filters</h2>
             <button
               onClick={onClose}
-              className="p-2 -mr-2 hover:bg-gray-100 rounded-lg transition-colors"
+              className="p-2 -mr-2 hover:bg-[#f8f8f6] rounded-xl transition-colors duration-200"
               aria-label="Close filters"
             >
-              <X className="w-5 h-5 text-gray-600" />
+              <X className="w-5 h-5 text-[#6b6b6b]" />
             </button>
           </div>
 
           {/* Active Filters Badge */}
           {activeFiltersCount > 0 && (
             <div className="mt-3 flex items-center justify-between">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#007aff] text-white text-xs font-medium rounded-full">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#0066ff]/10 text-[#0066ff] text-xs font-semibold rounded-lg">
                 {activeFiltersCount} {activeFiltersCount === 1 ? 'Filter' : 'Filters'} Active
               </div>
               <button
                 onClick={onClearAll}
-                className="text-sm text-[#007aff] hover:text-[#0056b3] font-medium transition-colors"
+                className="text-sm text-[#0066ff] hover:text-[#0052cc] font-medium transition-colors duration-200"
               >
                 Clear All
               </button>
@@ -95,8 +95,8 @@ export default function FilterDrawer({
 
           {/* Results Count */}
           {resultCount !== undefined && (
-            <p className="mt-3 text-sm text-gray-600">
-              Showing <span className="font-semibold text-gray-900">{resultCount}</span>{' '}
+            <p className="mt-3 text-sm text-[#6b6b6b]">
+              Showing <span className="font-semibold text-[#0a0a0a]">{resultCount}</span>{' '}
               {resultCount === 1 ? 'product' : 'products'}
             </p>
           )}
@@ -118,10 +118,10 @@ export default function FilterDrawer({
         </div>
 
         {/* Footer - Apply Button */}
-        <div className="sticky bottom-0 bg-white border-t border-gray-200 px-6 py-4 shadow-lg">
+        <div className="sticky bottom-0 bg-white border-t border-gray-100 px-6 py-4">
           <button
             onClick={onClose}
-            className="w-full bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white font-semibold py-3.5 rounded-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full bg-[#0066ff] text-white font-semibold py-3.5 rounded-xl hover:bg-[#0052cc] transition-colors duration-200"
           >
             View {resultCount || 0} {resultCount === 1 ? 'Product' : 'Products'}
           </button>

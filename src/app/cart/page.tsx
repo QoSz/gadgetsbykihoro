@@ -29,19 +29,19 @@ export default function CartPage() {
 
   if (cart.length === 0) {
     return (
-      <div className="min-h-[calc(100vh-80px)] bg-gradient-to-b from-gray-50 to-white py-12">
+      <div className="min-h-[calc(100vh-80px)] bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-center py-16">
-            <div className="bg-gray-100 rounded-full p-8 mb-6">
-              <ShoppingBag className="w-24 h-24 text-gray-400" />
+            <div className="bg-[#f8f8f6] rounded-2xl p-8 mb-6">
+              <ShoppingBag className="w-20 h-20 text-gray-300" />
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Your Cart is Empty</h2>
-            <p className="text-gray-600 mb-8 text-center max-w-md">
+            <h2 className="text-3xl font-bold tracking-tight text-[#0a0a0a] mb-4">Your Cart is Empty</h2>
+            <p className="text-[#6b6b6b] mb-8 text-center max-w-md">
               Looks like you haven&apos;t added anything to your cart yet. Start shopping to find amazing products!
             </p>
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white rounded-lg font-semibold hover:shadow-lg transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0066ff] text-white rounded-xl font-semibold hover:bg-[#0052cc] transition-colors duration-200"
             >
               <ShoppingBag className="w-5 h-5" />
               Start Shopping
@@ -53,21 +53,21 @@ export default function CartPage() {
   }
 
   return (
-    <div className="min-h-[calc(100vh-80px)] bg-gradient-to-b from-gray-50 to-white py-12">
+    <div className="min-h-[calc(100vh-80px)] bg-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">
           <button
             onClick={() => router.back()}
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-[#007aff] transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-[#6b6b6b] hover:text-[#0066ff] transition-colors duration-200 mb-4"
           >
             <ArrowLeft className="w-5 h-5" />
             Continue Shopping
           </button>
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-2">Shopping Cart</h1>
-              <p className="text-gray-600">
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0a0a0a] mb-2">Shopping Cart</h1>
+              <p className="text-[#6b6b6b]">
                 {cart.length} {cart.length === 1 ? 'item' : 'items'} in your cart
               </p>
             </div>
@@ -89,12 +89,12 @@ export default function CartPage() {
             {cart.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all p-6"
+                className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-200 p-6"
               >
                 <div className="flex gap-6">
                   {/* Product Image */}
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl flex items-center justify-center">
+                    <div className="w-24 h-24 bg-[#f8f8f6] rounded-xl flex items-center justify-center">
                       <svg className="w-10 h-10 text-gray-300" viewBox="0 0 48 48" fill="none" aria-hidden="true">
                         <rect x="8" y="6" width="32" height="36" rx="4" stroke="currentColor" strokeWidth="2" />
                         <rect x="20" y="10" width="8" height="2" rx="1" fill="currentColor" />
@@ -112,7 +112,7 @@ export default function CartPage() {
                         </h3>
                         <p className="text-sm text-gray-600 mb-2">{item.brand}</p>
                         {item.badge && (
-                          <span className="inline-block bg-[#007aff] text-white text-xs px-2 py-1 rounded font-semibold">
+                          <span className="inline-block bg-[#0066ff] text-white text-xs px-2 py-1 rounded font-semibold">
                             {item.badge}
                           </span>
                         )}
@@ -153,7 +153,7 @@ export default function CartPage() {
 
                       {/* Price */}
                       <div className="text-right">
-                        <p className="text-xl font-bold text-[#007aff]">
+                        <p className="text-xl font-bold text-[#0066ff]">
                           {formatPrice(item.price * item.quantity)}
                         </p>
                         {item.quantity > 1 && (
@@ -171,8 +171,8 @@ export default function CartPage() {
 
           {/* Order Summary */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-24">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Order Summary</h2>
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sticky top-24">
+              <h2 className="text-xl font-bold text-[#0a0a0a] mb-6">Order Summary</h2>
 
               {/* Summary Details */}
               <div className="space-y-4 mb-6">
@@ -189,7 +189,7 @@ export default function CartPage() {
                 <div className="border-t border-gray-200 pt-4">
                   <div className="flex justify-between text-lg font-bold text-gray-900">
                     <span>Total</span>
-                    <span className="text-[#007aff]">{formatPrice(getCartTotal())}</span>
+                    <span className="text-[#0066ff]">{formatPrice(getCartTotal())}</span>
                   </div>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function CartPage() {
               {/* Checkout Button */}
               <button
                 onClick={handleCheckout}
-                className="w-full px-6 py-4 bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white rounded-lg font-bold text-lg hover:shadow-lg transition-all hover:scale-105 mb-4"
+                className="w-full px-6 py-3.5 bg-[#0066ff] text-white rounded-xl font-semibold text-base hover:bg-[#0052cc] transition-colors duration-200 mb-4"
               >
                 Proceed to Checkout
               </button>
@@ -205,7 +205,7 @@ export default function CartPage() {
               {/* Continue Shopping Link */}
               <Link
                 href="/products"
-                className="block w-full text-center px-6 py-3 border-2 border-gray-200 text-gray-700 rounded-lg font-semibold hover:border-[#007aff] hover:text-[#007aff] transition-colors"
+                className="block w-full text-center px-6 py-3 border border-gray-200 text-[#404040] rounded-xl font-semibold hover:border-gray-300 hover:text-[#0a0a0a] transition-colors duration-200"
               >
                 Continue Shopping
               </Link>

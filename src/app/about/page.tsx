@@ -56,54 +56,27 @@ export default function AboutPage() {
     { number: '5+', label: 'Years in Business' },
   ];
 
-  const team = [
-    { 
-      name: 'John Kamau', 
-      role: 'Founder & CEO', 
-      initials: 'JK',
-      gradient: 'from-blue-600 to-indigo-700',
-    },
-    { 
-      name: 'Sarah Wanjiku', 
-      role: 'Head of Operations', 
-      initials: 'SW',
-      gradient: 'from-purple-600 to-pink-600',
-    },
-    { 
-      name: 'David Omondi', 
-      role: 'Lead Technician', 
-      initials: 'DO',
-      gradient: 'from-green-600 to-teal-600',
-    },
-    { 
-      name: 'Grace Akinyi', 
-      role: 'Customer Relations', 
-      initials: 'GA',
-      gradient: 'from-orange-600 to-red-600',
-    },
-  ];
-
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white py-20">
+      <section className="bg-[#f8f8f6] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">About Gadgets By Kihoro</h1>
-          <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0a0a0a] mb-4">About Gadgets By Kihoro</h1>
+          <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
             Kenya&apos;s trusted electronics retailer, committed to keeping you connected with quality products and exceptional service
           </p>
         </div>
       </section>
 
       {/* Our Story */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#0a0a0a] mb-6">
                 Our Story
               </h2>
-              <div className="space-y-4 text-gray-600 text-base">
+              <div className="space-y-4 text-[#404040] text-base">
                 <p>
                   Founded with a passion for technology and a commitment to customer satisfaction, Gadgets By Kihoro has been making cutting-edge technology accessible to everyone.
                 </p>
@@ -115,14 +88,11 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-[#007aff]/10 via-gray-50 to-gray-100 rounded-2xl h-96 flex items-center justify-center relative overflow-hidden shadow-lg">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#007aff]/5 to-transparent"></div>
-              <div className="relative">
-                <div className="w-48 h-48 bg-gradient-to-br from-[#007aff] to-[#0056b3] rounded-3xl flex items-center justify-center shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-300">
+            <div className="bg-[#f8f8f6] rounded-2xl border border-gray-100 h-96 flex items-center justify-center">
+              <div className="w-48 h-48 bg-[#0066ff] rounded-2xl flex items-center justify-center">
                   <svg className="w-28 h-28 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
-                </div>
               </div>
             </div>
           </div>
@@ -130,15 +100,15 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-[#007aff] mb-2">
+                <p className="text-3xl md:text-4xl font-bold text-[#0a0a0a] mb-2">
                   {stat.number}
                 </p>
-                <p className="text-gray-600 font-medium">{stat.label}</p>
+                <p className="text-[#6b6b6b] font-medium text-sm">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -146,13 +116,13 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-20">
+      <section className="py-24 bg-[#f8f8f6]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#0a0a0a] mb-4">
               Our Values
             </h2>
-            <p className="text-base text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-[#6b6b6b] max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </div>
@@ -161,46 +131,15 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl hover:-translate-y-2 transition-all group"
+                className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 text-center hover:shadow-md hover:border-gray-200 transition-all duration-200"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${value.gradient} rounded-xl mx-auto mb-6 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
+                <div className={`w-16 h-16 bg-gradient-to-br ${value.gradient} rounded-xl mx-auto mb-6 flex items-center justify-center shadow-md`}>
                   {value.svg}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                <h3 className="text-lg font-bold text-[#0a0a0a] mb-3">
                   {value.title}
                 </h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Meet Our Team
-            </h2>
-            <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              Dedicated professionals committed to your satisfaction
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2 group border border-gray-100"
-              >
-                <div className={`w-24 h-24 bg-gradient-to-br ${member.gradient} rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
-                  <span className="text-3xl font-bold text-white">{member.initials}</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-gray-600 text-sm">{member.role}</p>
+                <p className="text-[#404040]">{value.description}</p>
               </div>
             ))}
           </div>
@@ -208,17 +147,17 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white">
+      <section className="py-24 bg-[#0a0a0a] text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">
-            Ready to Experience the Gadgets By Kihoro Difference?
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-6">
+            Ready to Experience Gadgets By Kihoro?
           </h2>
-          <p className="text-lg mb-8 text-blue-100 max-w-2xl mx-auto">
+          <p className="text-lg mb-8 text-gray-400 max-w-2xl mx-auto">
             Visit our store or get in touch with us today
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#007aff] rounded-full font-semibold hover:bg-gray-50 transition-all hover:scale-105"
+            className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#0a0a0a] rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-200"
           >
             Contact Us
           </a>

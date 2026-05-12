@@ -162,25 +162,23 @@ function KCBOffersContent() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
+      <section className="bg-[#f8f8f6] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-4">
-            <span className="text-xs font-bold uppercase tracking-wider">KCB Financing Available</span>
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Own Your Device Today</h1>
-          <p className="text-lg text-green-100 max-w-3xl mx-auto mb-4">
+          <p className="text-sm font-semibold text-green-700 uppercase tracking-wider mb-4">KCB Financing Available</p>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0a0a0a] mb-4">Own Your Device Today</h1>
+          <p className="text-lg text-[#6b6b6b] max-w-3xl mx-auto mb-4">
             Get your favorite devices with flexible monthly payments through KCB Bank
           </p>
-          <div className="inline-flex items-center gap-2 bg-white/20 px-6 py-3 rounded-full">
-            <span className="font-bold text-sm">Pay as low as KSh 2,000/month</span>
+          <div className="inline-flex items-center gap-2 bg-green-50 border border-green-100 text-green-700 px-6 py-2.5 rounded-xl">
+            <span className="font-semibold text-sm">Pay as low as KSh 2,000/month</span>
           </div>
         </div>
       </section>
 
       {/* KCB Info Bar */}
-      <section className="bg-gradient-to-r from-green-50 to-white py-8 border-b border-green-200">
+      <section className="bg-white py-8 border-b border-gray-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="flex items-center gap-3">
@@ -329,14 +327,12 @@ function KCBOffersContent() {
 export default function KCBOffersPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
+      <div className="min-h-screen bg-white">
+        <section className="bg-[#f8f8f6] py-16 md:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-4">
-              <span className="text-xs font-bold uppercase tracking-wider">KCB Financing Available</span>
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Own Your Device Today</h1>
-            <p className="text-lg text-green-100 max-w-3xl mx-auto">
+            <p className="text-sm font-semibold text-green-700 uppercase tracking-wider mb-4">KCB Financing Available</p>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0a0a0a] mb-4">Own Your Device Today</h1>
+            <p className="text-lg text-[#6b6b6b] max-w-3xl mx-auto">
               Get your favorite devices with flexible monthly payments through KCB Bank
             </p>
           </div>

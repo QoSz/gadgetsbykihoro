@@ -33,8 +33,8 @@ const slides: Slide[] = [
     id: 1,
     src: '/home-hero/s25-ultra.webp',
     alt: 'Samsung Galaxy S25 Ultra',
-    width: 1120,
-    height: 320,
+    width: 1920,
+    height: 1080,
     title: 'Samsung Galaxy S25 Ultra',
     subtitle: 'The Ultimate Flagship Experience',
     badge: 'New Arrival',
@@ -51,10 +51,10 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    src: '/home-hero/z-flip.jpg',
+    src: '/home-hero/z-flip.webp',
     alt: 'Samsung Galaxy Z Flip',
-    width: 2334,
-    height: 668,
+    width: 1920,
+    height: 1440,
     title: 'Galaxy Z Flip',
     subtitle: 'Flip the Script on Style',
     badge: 'Trending',
@@ -71,10 +71,10 @@ const slides: Slide[] = [
   },
   {
     id: 3,
-    src: '/home-hero/Tab-s10.webp',
+    src: '/home-hero/tab-s10.webp',
     alt: 'Samsung Galaxy Tab S10',
-    width: 1120,
-    height: 320,
+    width: 1920,
+    height: 1280,
     title: 'Galaxy Tab S10',
     subtitle: 'Power Meets Portability',
     badge: 'Premium',
@@ -92,9 +92,9 @@ const slides: Slide[] = [
   {
     id: 4,
     src: '/home-hero/neon-smart.webp',
-    alt: 'Neon Smart Phone',
-    width: 1120,
-    height: 320,
+    alt: 'Cutting-edge technology with neon aesthetic',
+    width: 1920,
+    height: 1080,
     title: 'Cutting-Edge Technology',
     subtitle: 'Experience Next-Gen Innovation',
     badge: 'Hot Deal',
@@ -111,10 +111,10 @@ const slides: Slide[] = [
   },
   {
     id: 5,
-    src: '/home-hero/service-centers.png',
+    src: '/home-hero/service-centers.webp',
     alt: 'Gadgets By Kihoro Service Centers',
-    width: 1024,
-    height: 293,
+    width: 1920,
+    height: 1080,
     title: '25 Years of Excellence',
     subtitle: 'Your Trusted Tech Partner Since 1999',
     badge: 'Award Winning',
@@ -188,24 +188,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-800 overflow-hidden">
-      {/* Animated Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div
-          className="absolute inset-0 motion-safe:animate-pulse"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, #3B82F6 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}
-        ></div>
-      </div>
-
-      {/* Subtle Floating Orbs for Depth */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl motion-safe:animate-float motion-reduce:hidden"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl motion-safe:animate-float-delayed motion-reduce:hidden"></div>
-      </div>
-
+    <section className="relative bg-white text-gray-800 overflow-hidden">
       {/* Carousel Container */}
       <div className="relative">
         <div className="overflow-hidden" ref={emblaRef}>
@@ -289,7 +272,7 @@ export default function HeroCarousel() {
                           }`}>
                             <Link
                               href={slide.cta.href}
-                              className="group inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-gray-900 rounded-xl font-bold text-sm md:text-base hover:bg-blue-600 hover:text-white transition shadow-xl hover:shadow-2xl hover:scale-105 transform-gpu will-change-transform"
+                              className="group inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-[#0a0a0a] rounded-xl font-semibold text-sm md:text-base hover:bg-[#0066ff] hover:text-white transition-colors duration-200 shadow-xl"
                             >
                               {slide.cta.text}
                               <ChevronRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
@@ -306,8 +289,6 @@ export default function HeroCarousel() {
                         )}
                       </div>
 
-                      {/* Decorative Corner Accent */}
-                      <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-white/5 rounded-bl-full"></div>
                     </div>
                   </div>
                 </div>
@@ -319,7 +300,7 @@ export default function HeroCarousel() {
         {/* Enhanced Navigation Arrows */}
         <button
           onClick={scrollPrev}
-          className="hidden md:flex absolute left-6 lg:left-8 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-14 h-14 rounded-full bg-white/90 backdrop-blur-md text-gray-900 hover:bg-white hover:scale-110 transition duration-300 group shadow-2xl hover:shadow-blue-600/20 transform-gpu will-change-transform"
+          className="hidden md:flex absolute left-6 lg:left-8 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm text-gray-900 hover:bg-white transition duration-200 group shadow-lg"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-7 h-7 group-hover:-translate-x-0.5 transition-transform" strokeWidth={2.5} />
@@ -327,7 +308,7 @@ export default function HeroCarousel() {
 
         <button
           onClick={scrollNext}
-          className="hidden md:flex absolute right-6 lg:right-8 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-14 h-14 rounded-full bg-white/90 backdrop-blur-md text-gray-900 hover:bg-white hover:scale-110 transition duration-300 group shadow-2xl hover:shadow-blue-600/20 transform-gpu will-change-transform"
+          className="hidden md:flex absolute right-6 lg:right-8 top-1/2 -translate-y-1/2 z-20 items-center justify-center w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm text-gray-900 hover:bg-white transition duration-200 group shadow-lg"
           aria-label="Next slide"
         >
           <ChevronRight className="w-7 h-7 group-hover:translate-x-0.5 transition-transform" strokeWidth={2.5} />
@@ -352,27 +333,6 @@ export default function HeroCarousel() {
         </div>
       </div>
 
-      {/* Elegant Wave Divider with Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 -mb-1 pointer-events-none">
-        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 1 }} />
-              <stop offset="50%" style={{ stopColor: '#f9fafb', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#ffffff', stopOpacity: 1 }} />
-            </linearGradient>
-          </defs>
-          <path 
-            d="M0,40 C240,80 480,90 720,70 C960,50 1200,20 1440,50 L1440,120 L0,120 Z" 
-            fill="url(#wave-gradient)"
-          />
-          <path 
-            d="M0,60 C240,90 480,100 720,80 C960,60 1200,40 1440,65 L1440,120 L0,120 Z" 
-            fill="white" 
-            opacity="0.5"
-          />
-        </svg>
-      </div>
     </section>
   );
 }

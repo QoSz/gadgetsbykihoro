@@ -182,12 +182,12 @@ function TelevisionsContent() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white py-16">
+      <section className="bg-[#f8f8f6] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Televisions</h1>
-          <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0a0a0a] mb-4">Televisions</h1>
+          <p className="text-lg text-[#6b6b6b] max-w-3xl mx-auto">
             Smart TVs and entertainment systems from leading brands
           </p>
         </div>
@@ -224,7 +224,7 @@ function TelevisionsContent() {
               <p className="text-gray-600 mb-8">Try adjusting your filters to see more products</p>
               <button
                 onClick={handleClearAll}
-                className="inline-flex items-center justify-center px-6 py-3 bg-[#007aff] text-white rounded-lg font-semibold hover:bg-[#0056b3] transition-all"
+                className="inline-flex items-center justify-center px-6 py-3 bg-[#0066ff] text-white rounded-lg font-semibold hover:bg-[#0052cc] transition-all"
               >
                 Reset Filters
               </button>
@@ -239,17 +239,17 @@ function TelevisionsContent() {
 export default function TelevisionsPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-[#007aff] to-[#0056b3] text-white py-16">
+      <div className="min-h-screen bg-white">
+        <section className="bg-[#f8f8f6] py-16 md:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Televisions</h1>
-            <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0a0a0a] mb-4">Televisions</h1>
+            <p className="text-lg text-[#6b6b6b] max-w-3xl mx-auto">
               Smart TVs and entertainment systems from leading brands
             </p>
           </div>
         </section>
         <div className="flex items-center justify-center py-20">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#007aff]"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#0066ff]"></div>
         </div>
       </div>
     }>
