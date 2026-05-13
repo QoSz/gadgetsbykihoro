@@ -5,6 +5,7 @@ import { formatPrice } from '@/data/products';
 import Link from 'next/link';
 import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { MessageCircle } from 'lucide-react';
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity, getCartTotal, clearCart } = useCart();
@@ -12,8 +13,11 @@ export default function CartPage() {
 
   const handleCheckout = () => {
     if (cart.length === 0) return;
+    router.push('/checkout');
+  };
 
-    // Create WhatsApp message with cart items
+  const handleWhatsAppOrder = () => {
+    if (cart.length === 0) return;
     let message = 'Hi! I would like to order the following items:\n\n';
     cart.forEach((item, index) => {
       message += `${index + 1}. ${item.name}\n`;
@@ -22,9 +26,8 @@ export default function CartPage() {
     });
     message += `Total: ${formatPrice(getCartTotal())}\n\n`;
     message += 'Please confirm availability and delivery details.';
-
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/254743816791?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/254788740000?text=${encodedMessage}`, '_blank');
   };
 
   if (cart.length === 0) {
@@ -197,9 +200,18 @@ export default function CartPage() {
               {/* Checkout Button */}
               <button
                 onClick={handleCheckout}
-                className="w-full px-6 py-3.5 bg-[#0066ff] text-white rounded-xl font-semibold text-base hover:bg-[#0052cc] transition-colors duration-200 mb-4"
+                className="w-full px-6 py-3.5 bg-[#0066ff] text-white rounded-xl font-semibold text-base hover:bg-[#0052cc] transition-colors duration-200 mb-3"
               >
                 Proceed to Checkout
+              </button>
+
+              {/* WhatsApp Alternative */}
+              <button
+                onClick={handleWhatsAppOrder}
+                className="w-full px-6 py-3 bg-[#25D366] text-white rounded-xl font-semibold text-sm hover:bg-[#1da851] transition-colors duration-200 mb-4 flex items-center justify-center gap-2"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Order via WhatsApp
               </button>
 
               {/* Continue Shopping Link */}

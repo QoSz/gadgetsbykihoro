@@ -11,6 +11,7 @@ interface OrderRow {
   items: string;
   status: string;
   totalAmount: number;
+  estimatedDelivery: string | null;
   createdAt: string;
   updatedAt: string;
 }

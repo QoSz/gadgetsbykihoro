@@ -12,6 +12,7 @@ interface OrderRow {
   items: string;
   status: string;
   totalAmount: number;
+  estimatedDelivery: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -60,7 +61,7 @@ export async function POST(request: NextRequest) {
 
   const insertResult = await execute(
     `INSERT INTO orders (orderNumber, customerName, customerPhone, customerEmail, items, status, totalAmount)
-     VALUES (?, ?, ?, ?, ?, 'Received', ?)`,
+     VALUES (?, ?, ?, ?, ?, 'Order Confirmed', ?)`,
     [orderNumber, body.customerName, body.customerPhone, body.customerEmail, JSON.stringify(body.items), body.totalAmount]
   );
 
@@ -68,7 +69,7 @@ export async function POST(request: NextRequest) {
 
   await execute(
     'INSERT INTO order_status_history (orderId, status) VALUES (?, ?)',
-    [Number(orderId), 'Received']
+    [Number(orderId), 'Order Confirmed']
   );
 
   const order = await queryOne<OrderRow>('SELECT * FROM orders WHERE id = ?', [Number(orderId)]);

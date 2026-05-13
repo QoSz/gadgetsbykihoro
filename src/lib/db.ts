@@ -19,8 +19,9 @@ export async function initDb() {
       customerPhone TEXT NOT NULL,
       customerEmail TEXT NOT NULL,
       items TEXT NOT NULL,
-      status TEXT NOT NULL DEFAULT 'Received' CHECK(status IN ('Received','Processing','Ready for Pickup','Completed')),
+      status TEXT NOT NULL DEFAULT 'Order Confirmed',
       totalAmount INTEGER NOT NULL,
+      estimatedDelivery TEXT,
       createdAt TEXT NOT NULL DEFAULT (datetime('now')),
       updatedAt TEXT NOT NULL DEFAULT (datetime('now'))
     )`,
@@ -37,6 +38,13 @@ export async function initDb() {
       changedAt TEXT NOT NULL DEFAULT (datetime('now'))
     )`,
   ]);
+
+  // Migration: add estimatedDelivery column for tables created with old schema
+  try {
+    await db.execute({ sql: 'ALTER TABLE orders ADD COLUMN estimatedDelivery TEXT', args: [] });
+  } catch {
+    // Column already exists — expected on fresh installs
+  }
 }
 
 export async function query<T>(sql: string, args: (string | number | null)[] = []): Promise<T[]> {

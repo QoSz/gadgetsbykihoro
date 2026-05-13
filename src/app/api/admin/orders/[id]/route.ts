@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { queryOne, query, batch } from '@/lib/db';
+import { ORDER_STATUSES } from '@/types/order';
 import type { UpdateOrderInput, OrderNote, OrderStatusHistory } from '@/types/order';
 
 interface OrderRow {
@@ -11,11 +12,10 @@ interface OrderRow {
   items: string;
   status: string;
   totalAmount: number;
+  estimatedDelivery: string | null;
   createdAt: string;
   updatedAt: string;
 }
-
-const VALID_STATUSES: readonly string[] = ['Received', 'Processing', 'Ready for Pickup', 'Completed'];
 
 export async function GET(
   _request: NextRequest,
@@ -58,12 +58,12 @@ export async function PATCH(
     return NextResponse.json({ error: 'Order not found' }, { status: 404 });
   }
 
-  if (body.status && !VALID_STATUSES.includes(body.status)) {
+  if (body.status && !(ORDER_STATUSES as readonly string[]).includes(body.status)) {
     return NextResponse.json({ error: 'Invalid status' }, { status: 400 });
   }
 
   const setClauses: string[] = [];
-  const values: (string | number)[] = [];
+  const values: (string | number | null)[] = [];
 
   if (body.customerName) { setClauses.push('customerName = ?'); values.push(body.customerName); }
   if (body.customerPhone) { setClauses.push('customerPhone = ?'); values.push(body.customerPhone); }
@@ -71,6 +71,10 @@ export async function PATCH(
   if (body.items) { setClauses.push('items = ?'); values.push(JSON.stringify(body.items)); }
   if (body.status) { setClauses.push('status = ?'); values.push(body.status); }
   if (body.totalAmount != null) { setClauses.push('totalAmount = ?'); values.push(body.totalAmount); }
+  if (body.estimatedDelivery !== undefined) {
+    setClauses.push('estimatedDelivery = ?');
+    values.push(body.estimatedDelivery ?? null);
+  }
 
   if (setClauses.length === 0) {
     return NextResponse.json({ error: 'No fields to update' }, { status: 400 });
@@ -79,7 +83,7 @@ export async function PATCH(
   setClauses.push("updatedAt = datetime('now')");
   values.push(Number(id));
 
-  const stmts: { sql: string; args: (string | number)[] }[] = [
+  const stmts: { sql: string; args: (string | number | null)[] }[] = [
     { sql: `UPDATE orders SET ${setClauses.join(', ')} WHERE id = ?`, args: values },
   ];
 

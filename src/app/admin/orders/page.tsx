@@ -10,8 +10,12 @@ import {
   ChevronUp,
   Send,
   Clock,
-  Check,
   Filter,
+  CheckCircle,
+  Shield,
+  Truck,
+  CircleCheckBig,
+  CalendarDays,
 } from 'lucide-react';
 import type {
   Order,
@@ -29,10 +33,19 @@ import { allProducts } from '@/data/products';
 // ---------------------------------------------------------------------------
 
 const STATUS_BADGE: Record<OrderStatus, string> = {
-  Received: 'bg-blue-100 text-blue-700',
-  Processing: 'bg-yellow-100 text-yellow-700',
-  'Ready for Pickup': 'bg-purple-100 text-purple-700',
-  Completed: 'bg-green-100 text-green-700',
+  'Order Confirmed': 'bg-blue-100 text-blue-700',
+  'Payment Verified': 'bg-emerald-100 text-emerald-700',
+  'Shipment Processing': 'bg-amber-100 text-amber-700',
+  'In Transit': 'bg-purple-100 text-purple-700',
+  Delivered: 'bg-green-100 text-green-700',
+};
+
+const STEP_ICON: Record<OrderStatus, typeof CheckCircle> = {
+  'Order Confirmed': CheckCircle,
+  'Payment Verified': Shield,
+  'Shipment Processing': Package,
+  'In Transit': Truck,
+  Delivered: CircleCheckBig,
 };
 
 function formatKSh(amount: number): string {
@@ -55,6 +68,14 @@ function formatDateTime(iso: string): string {
     hour: '2-digit',
     minute: '2-digit',
   });
+}
+
+function todayISO(): string {
+  const d = new Date();
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 const INPUT_CLS =
@@ -176,6 +197,32 @@ export default function AdminOrdersPage() {
       }
     } finally {
       setStatusUpdating(false);
+    }
+  }
+
+  // -----------------------------------------------------------------------
+  // Estimated delivery update
+  // -----------------------------------------------------------------------
+
+  const [deliveryDate, setDeliveryDate] = useState('');
+  const [deliveryUpdating, setDeliveryUpdating] = useState(false);
+
+  async function handleDeliveryUpdate(orderId: number) {
+    if (!deliveryDate) return;
+    setDeliveryUpdating(true);
+    try {
+      const res = await fetch(`/api/admin/orders/${orderId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ estimatedDelivery: deliveryDate }),
+      });
+      if (res.ok) {
+        setDeliveryDate('');
+        fetchDetail(orderId);
+        fetchOrders(search, statusFilter);
+      }
+    } finally {
+      setDeliveryUpdating(false);
     }
   }
 
@@ -319,6 +366,10 @@ export default function AdminOrdersPage() {
                       setStatusUpdate={setStatusUpdate}
                       statusUpdating={statusUpdating}
                       onStatusUpdate={() => handleStatusUpdate(order.id)}
+                      deliveryDate={deliveryDate}
+                      setDeliveryDate={setDeliveryDate}
+                      deliveryUpdating={deliveryUpdating}
+                      onDeliveryUpdate={() => handleDeliveryUpdate(order.id)}
                       newNote={newNote}
                       setNewNote={setNewNote}
                       noteAdding={noteAdding}
@@ -343,6 +394,10 @@ export default function AdminOrdersPage() {
                   setStatusUpdate={setStatusUpdate}
                   statusUpdating={statusUpdating}
                   onStatusUpdate={() => handleStatusUpdate(order.id)}
+                  deliveryDate={deliveryDate}
+                  setDeliveryDate={setDeliveryDate}
+                  deliveryUpdating={deliveryUpdating}
+                  onDeliveryUpdate={() => handleDeliveryUpdate(order.id)}
                   newNote={newNote}
                   setNewNote={setNewNote}
                   noteAdding={noteAdding}
@@ -375,6 +430,10 @@ interface OrderDetailProps {
   setStatusUpdate: (s: OrderStatus | '') => void;
   statusUpdating: boolean;
   onStatusUpdate: () => void;
+  deliveryDate: string;
+  setDeliveryDate: (d: string) => void;
+  deliveryUpdating: boolean;
+  onDeliveryUpdate: () => void;
   newNote: string;
   setNewNote: (s: string) => void;
   noteAdding: boolean;
@@ -490,6 +549,10 @@ function ExpandedDetail({
   setStatusUpdate,
   statusUpdating,
   onStatusUpdate,
+  deliveryDate,
+  setDeliveryDate,
+  deliveryUpdating,
+  onDeliveryUpdate,
   newNote,
   setNewNote,
   noteAdding,
@@ -571,6 +634,35 @@ function ExpandedDetail({
         </div>
       </div>
 
+      {/* ---- Estimated Delivery ---- */}
+      <div>
+        <p className="text-xs font-semibold text-[#424242] mb-2">Estimated Delivery</p>
+        {detail.estimatedDelivery && (
+          <div className="flex items-center gap-2 mb-2 text-sm text-[#404040]">
+            <CalendarDays size={14} className="text-[#0066ff] shrink-0" />
+            <span>
+              Current: <span className="font-medium text-[#0a0a0a]">{formatDate(detail.estimatedDelivery)}</span>
+            </span>
+          </div>
+        )}
+        <div className="flex items-center gap-2">
+          <input
+            type="date"
+            value={deliveryDate}
+            onChange={(e) => setDeliveryDate(e.target.value)}
+            min={todayISO()}
+            className={`${INPUT_CLS} max-w-xs`}
+          />
+          <button
+            onClick={onDeliveryUpdate}
+            disabled={!deliveryDate || deliveryUpdating}
+            className={`${BTN_PRIMARY} px-4 py-2 disabled:opacity-50`}
+          >
+            {deliveryUpdating ? 'Setting...' : 'Set Date'}
+          </button>
+        </div>
+      </div>
+
       {/* ---- Notes ---- */}
       <div>
         <p className="text-xs font-semibold text-[#424242] mb-2">Notes</p>
@@ -613,7 +705,7 @@ function ExpandedDetail({
   );
 }
 
-// ---- Status Timeline (vertical, 4 nodes) ----
+// ---- Status Timeline (vertical, 5 nodes) ----
 
 function StatusTimeline({
   currentStatus,
@@ -630,6 +722,7 @@ function StatusTimeline({
         const reached = i <= currentIdx;
         const historyEntry = statusHistory.find((h) => h.status === status);
         const isLast = i === ORDER_STATUSES.length - 1;
+        const Icon = STEP_ICON[status];
 
         return (
           <div key={status} className="flex items-start gap-3">
@@ -642,7 +735,7 @@ function StatusTimeline({
                     : 'bg-gray-100 text-gray-400'
                 }`}
               >
-                {reached ? <Check size={14} /> : <Clock size={14} />}
+                {reached ? <Icon size={14} /> : <Clock size={14} />}
               </div>
               {!isLast && (
                 <div

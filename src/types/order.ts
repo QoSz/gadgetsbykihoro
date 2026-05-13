@@ -1,4 +1,11 @@
-export const ORDER_STATUSES = ['Received', 'Processing', 'Ready for Pickup', 'Completed'] as const;
+export const ORDER_STATUSES = [
+  'Order Confirmed',
+  'Payment Verified',
+  'Shipment Processing',
+  'In Transit',
+  'Delivered',
+] as const;
+
 export type OrderStatus = (typeof ORDER_STATUSES)[number];
 
 export interface OrderItem {
@@ -16,6 +23,7 @@ export interface Order {
   items: OrderItem[];
   status: OrderStatus;
   totalAmount: number;
+  estimatedDelivery: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -49,6 +57,7 @@ export interface UpdateOrderInput {
   items?: OrderItem[];
   status?: OrderStatus;
   totalAmount?: number;
+  estimatedDelivery?: string | null;
 }
 
 export interface OrderWithDetails extends Order {
