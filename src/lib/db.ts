@@ -45,6 +45,36 @@ export async function initDb() {
   } catch {
     // Column already exists — expected on fresh installs
   }
+
+  // Migration: fix FK references broken by previous table rebuild
+  try {
+    const notesInfo = await db.execute({ sql: "SELECT sql FROM sqlite_master WHERE type='table' AND name='order_notes'", args: [] });
+    const notesSql = notesInfo.rows[0]?.sql as string | undefined;
+    if (notesSql && notesSql.includes('orders_old')) {
+      await db.batch([
+        'ALTER TABLE order_notes RENAME TO order_notes_old',
+        `CREATE TABLE order_notes (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          orderId INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
+          note TEXT NOT NULL,
+          createdAt TEXT NOT NULL DEFAULT (datetime('now'))
+        )`,
+        'INSERT INTO order_notes SELECT * FROM order_notes_old',
+        'DROP TABLE order_notes_old',
+        'ALTER TABLE order_status_history RENAME TO order_status_history_old',
+        `CREATE TABLE order_status_history (
+          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          orderId INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
+          status TEXT NOT NULL,
+          changedAt TEXT NOT NULL DEFAULT (datetime('now'))
+        )`,
+        'INSERT INTO order_status_history SELECT * FROM order_status_history_old',
+        'DROP TABLE order_status_history_old',
+      ]);
+    }
+  } catch {
+    // Already migrated or fresh install
+  }
 }
 
 export async function query<T>(sql: string, args: (string | number | null)[] = []): Promise<T[]> {
