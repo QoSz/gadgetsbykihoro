@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import HeroCarousel from '@/components/HeroCarousel';
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       originalPrice: 'KSh 10,999',
       specs: '4GB RAM • 64GB Storage • 50MP Camera',
       badge: '25th Anniversary Sale',
+      image: '/products/smartphones/phone-011.webp',
     },
     {
       name: 'HMD Arc',
@@ -25,6 +27,7 @@ export default function Home() {
       originalPrice: 'KSh 10,499',
       specs: '4GB RAM • 64GB Storage • 5000mAh',
       badge: 'Special Offer',
+      image: '/products/smartphones/phone-014.webp',
     },
     {
       name: 'Samsung Galaxy Tab S9',
@@ -33,6 +36,7 @@ export default function Home() {
       originalPrice: 'KSh 91,999',
       specs: '8GB RAM • 128GB Storage • 11" Display',
       badge: '26% Off',
+      image: '/products/tablets/tablet-002.webp',
     },
     {
       name: 'Nokia C12 Pro',
@@ -41,6 +45,7 @@ export default function Home() {
       originalPrice: 'KSh 9,999',
       specs: '4GB RAM • 64GB Storage • IP52 Water Resistant',
       badge: 'Limited Stock',
+      image: '/products/smartphones/phone-013.webp',
     },
   ];
 
@@ -128,10 +133,14 @@ export default function Home() {
               >
                 {/* Product Image */}
                 <div className="relative flex-shrink-0">
-                  <div className="bg-gray-50 h-52 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-gray-200 rounded-2xl flex items-center justify-center shadow-sm">
-                      <div className="w-24 h-24 bg-white rounded-xl shadow-inner"></div>
-                    </div>
+                  <div className="bg-gray-50 h-52 flex items-center justify-center p-4">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      width={180}
+                      height={180}
+                      className="object-contain h-full w-auto"
+                    />
                   </div>
                   <div className="absolute top-3 left-3 bg-[#0066ff]/10 text-[#0066ff] px-3 py-1 rounded-md text-xs font-bold">
                     {product.badge}
